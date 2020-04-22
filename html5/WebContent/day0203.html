@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;		
+		}
+		div{
+			display: block;
+			width: 200px;			/*컨텐츠의 너비*/
+			height: 200px;			/*컨텐츠의 높이*/
+			font-size: 30px;
+			text-align: left;
+			line-height: 100px;
+		}
+		#box1{
+			background: orange;
+			padding: 30px;			/*내부여백*/
+			/* padding, margin
+				값 1개입력: 4방위 모두 적용
+				2개 입력: 1은 위아래, 2는 좌우 값
+				3개 입력: 1은 위, 2는 좌우, 3은 아래
+				4개 입력: 상우하좌 순(시계방향)
+			   padding- top/ right/ bottom/ left 각각지정가능
+			*/
+			border: 10px solid red; 	/*외곽선*/
+			/* border
+				첫번째값: 선두께
+				두번째값: 선종류
+				세번째값: 선색상
+				3가지 순서 상관없이 사용가능
+			   border- color/ width/ style로 각각지정 가능
+			   border- top/ right/ bottom /left/
+			   border-top-color: blue;	조합하여 사용도 가능
+			   선종류
+			   solid: 실선	double: 두줄	dotted: 점선
+			   dashed: 끊어진실선	groove: 음영
+			   ridge: 다른방향음영	inset:들어간입체 	outset:볼록한입체 
+			*/
+			border-style: inset;
+			margin: 50px;
+			box-sizing:border-box;	/*박스크기의 기준점 설정*/
+		}
+		#box2{
+			background: pink;
+		}
+		#box3{
+			display: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="box1">box1<br/>박스1</div>
+	<div id="box2">box2</div>
+	<div id="box3">box3</div>
+</body>
+</html>

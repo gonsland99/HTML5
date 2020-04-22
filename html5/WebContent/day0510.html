@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var today = new Date();
+		document.write(today.toDateString() + "<br/>");
+		document.write(today.toISOString() + "<br/>");
+		document.write(today.toJSON() + "<br/>");
+		document.write(today.toLocaleDateString() + "<br/>");
+		document.write(today.toLocaleTimeString() + "<br/>");
+		document.write(today.toLocaleString() + "<br/>");
+		document.write(today.toString() + "<br/>");
+		document.write(today.toTimeString() + "<br/>");
+		document.write(today.toUTCString() + "<br/>");
+		/*
+		Wed Apr 22 2020
+		2020-04-22T06:22:05.527Z
+		2020-04-22T06:22:05.527Z
+		2020. 4. 22.
+		오후 3:22:05
+		2020. 4. 22. 오후 3:22:05
+		Wed Apr 22 2020 15:22:05 GMT+0900 (대한민국 표준시)
+		15:22:05 GMT+0900 (대한민국 표준시)
+		Wed, 22 Apr 2020 06:22:05 GMT
+		*/
+	</script>
+</body>
+</html>

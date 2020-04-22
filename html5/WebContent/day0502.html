@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		//prompt를 사용하면 문자열이 입력된다. ex)10-> "10"
+		let x = prompt("x의 값은?", "정수만 입력가능!");
+		let y = prompt("y의 값은?", "실수는 입력불가!'");
+		x = parseInt(x);		//문자를 정수로만 변환
+		y = Number(y);			//정수,실수 모두 변환
+		let result = x + y;
+		console.log(result);
+		let result2 = confirm("진행할까요?");	//confirm: true, false값을 리턴한다.
+		console.log(result2);
+		alert("경고!!!")	//경고창 출력
+	</script>
+</body>
+</html>

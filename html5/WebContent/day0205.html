@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+		}
+		.menu > h3{
+			color: blue;
+		}
+		.menu .like{
+			color: red;
+		}
+		.like + li{
+			background: yellow;
+		}
+		#korea > li{
+			font-size: 20px;
+		}
+		#korea > li:first-child{
+			color: red;
+		}
+		#america > li:nth-child(2){		/* html은 0이 아닌 1부터 시작*/
+			background: pink;
+		}
+		#america > li:nth-child(2n-1){
+			color: red;
+		}
+		#china > li:first-of-type{
+			color: purple;
+		}
+		h3 {
+			font-family:'궁서','맑은 고딕', serif;
+		}
+		li{
+			font-family: 'Nanum Pen Script', cursive;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li class="menu">
+				<h3>한식</h3>
+				<ul id="korea">
+					<li>김치찌개</li>
+					<li>된장찌개</li>
+					<li class="like">비빔밥</li>
+				</ul>	
+			</li>
+			<li class="menu">
+				<h3>양식</h3>
+				<ul id="america">
+					<li class="like">파스타</li>
+					<li>피자</li>
+					<li>스테이크</li>
+				</ul>	
+			</li>
+			<li class="menu">
+			<h3>중식</h3>
+				<ul id="china">
+					<li>자장면</li>
+					<li>짬뽕</li>
+					<li class="like">탕수육</li>
+				</ul>	
+			</li>
+			<li class="menu">
+				<h3>일식</h3>
+				<ul id="japan">
+					<li>초밥</li>
+					<li class="like">우동</li>
+					<li>돈까스</li>
+				</ul>	
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

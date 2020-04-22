@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-docoration: none;
+			list-style: none;
+		}
+		#parent{
+			width: 600px;
+			height: 500px;
+			background: pink;
+		}
+		#box1{			/*id = 1000*/
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		#box2{
+			width: 200px;
+			height: 200px;
+			background: blue;
+		}
+		/*복합선택자*/
+		#parent #box1{	/*id + id = 2000*/
+			background: green;	/*우선점수가 높다*/
+		}
+		/**/
+		/*속성선택자*/
+		input[type="text"]{
+			width: 300px;
+			height: 50px;
+		}
+		input[placeholder*="비밀번호"]{
+			background: yellow;
+		}
+		a:link{
+		}
+		a:visited{
+			color: green;
+		}
+		a:hover{
+			background: yellow;
+		}
+		a:active{
+			background: red;
+		}
+		a{
+			font-size: 30px; !important;
+		}
+		a{
+			font-size: 5px;
+		}
+		/*동위선택자*/
+		#box1 + div{ /*바로 다음 나오는 태그일 경우만 선택*/
+		}
+		#box1 ~ div{ /*#box1 다음에 오는 모든 div 선택*/
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="parent">
+		<div id="box1">
+			<p>box1</p>
+		</div>
+		<div id="box2">box2</div>
+	</div>
+	<div>
+		<form>
+			<input type="text" placeholder="아이디를 입력하세요"/><br/>
+			<input type = "password" placeholder="비밀번호를 입력하세요"/><br/>
+			<input type = "reset" />
+			<button type="submit">로그인</button>
+		</form>
+	</div>
+	<div>
+		<p><a href="http://naver.com">네이버로 이동</a></p>
+		<p><a href="http://nate.com" >네이트로 이동</a></p>
+	</div>
+</body>
+</html>
