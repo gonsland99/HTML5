@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div.out{						/* >자식 " "후손 div.out과 div .out은 다름(띄어쓰기)*/
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+	}
+</style>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+	<div class = "out">
+		<p>마우스 이벤트</p>
+	</div>
+	<!-- script add -->
+	<script>
+		$(function(){
+			$("div.out").mouseover(function(){
+				$("p:first").text("mouse over");
+			});
+			$("div.out").mouseout(function(){
+				$("p").text("mouse out");
+			});
+			$("div.out").click(function(){
+				$("p").text("mouse click");
+			});
+			$("div.out").dblclick(function(){
+				$("p").text("mouse double click");
+			});
+			$("div.out").contextmenu(function(){
+				$("p").text("mouse right click");
+			});
+			
+		});
+	</script>
+</body>
+</html>
