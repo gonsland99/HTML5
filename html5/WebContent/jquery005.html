@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2></h2><br/>
+	<h2></h2>
+	<button>버튼</button>
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function(){
+			$("html, body").on("mousewheel", function(e){		//크롬, 익스플로러등등..
+				$("h2:first").text(e.originalEvent.wheelDelta);
+			});
+			$("html, body").on("DOMmouseScroll", function(e){		//파이어 폭스
+				$("h2:last").text(e.originalEvent.wheelDelta);
+			});
+			$("button").bind("click mouseenter", function(){console.log("click")});
+			
+			$("html, body").on("mousewheel DOMmouseScroll", function(e){
+				if(e.originalEvent.wheelDelta == 150 || e.originalEvent.detail == -3){
+					console.log("wheel up");
+				} else if(e.originalEvent.wheelDelta == -150 || e.originalEvent.detail == 3){
+					console.log("wheel down");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
